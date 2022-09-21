@@ -1,0 +1,120 @@
+@import url("https://fonts.google.com/specimen/Montserrat");
+@import url("https://fonts.google.com/specimen/Fraunces");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: antiquewhite;
+    padding: 5rem 4rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: block;
+    border-top-left-radius: .7rem;
+    border-top-right-radius: .7rem;
+    
+}
+img:nth-child(2){
+    display: none;
+    width: 100%;
+}
+.container{
+    background-color:white;
+    border-radius: .7rem;
+    
+}
+.product-details > * {
+    margin-block : .75rem;
+}
+.product-details{
+    padding: 1.0em;
+}
+.product-title{
+    font-size: 0.85em;
+    font-weight: 900;
+    color:hsl(228, 12%, 48%);
+    font-family: Montserrat;
+    text-transform: uppercase;
+}
+.product-desc >h1{
+    font-family: Fraunces;
+    font-size: 2.0em;
+    font-weight: 700;
+    color: hsl(212, 21%, 14%);
+    margin-block: .5em;
+}
+p{
+    font-size: 16px;
+    font-family:Montserrat ;
+    color:hsl(228, 12%, 48%);
+    line-height: 1.5;
+}
+.rate{
+    display: flex;
+    gap:1em;
+    margin-block: .5em;
+    align-items: center;
+}
+.rate >p{
+    color: hsl(158, 36%, 37%);
+    font-size: 2.0em;
+    font-weight: 700;
+}
+.rate >p:nth-child(2){
+    color: hsl(228, 12%, 48%);
+    font-size: 16px;
+    text-decoration: line-through;
+
+}
+button{
+    display: flex;
+    gap: 0.5em;
+    width: 100%;
+    padding: 1em 2em;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width:760px){
+   
+    img:first-child{
+        display:none;
+    }
+    img:nth-child(2){
+        display:block;
+        width: 100%;
+        height: 100%;
+        
+        border-top-right-radius: 0;
+        border-bottom-left-radius: .5em;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 10%;
+        
+    }
+    body{
+        padding: 10em;
+    }
+    .product-details{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+    }
+    
+}
