@@ -68,11 +68,13 @@ body{
     color: white;
     font-size: 25px;
     font-weight: bold;
+    text-transform: uppercase;
 }
 .partners div p{
     color: hsla(0, 0%, 100%, 0.75);
     font-size: 15px;
 }
+
 h1{
     font-size: 0.7rem;
     color: white;
@@ -93,19 +95,32 @@ p{
 }
 
 @media screen and (min-width: 768px){
+    body{
+        padding: 3.5rem 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .desc{
+        margin-block: 1em;
+    }
     .container{
+        width: 60vw;
         display: grid;
         grid-template-columns: repeat(2,1fr);
+        border-radius: 5px;
     }
     .partners{
+        margin-block: 1em;
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         flex-direction: row;
         align-items: center;
     }
     .info{
+        
         text-align: left;
-        padding: 1.25em;
+        
         padding-bottom: 0;
         margin: 0px;
         grid-column: 1/2;
@@ -119,11 +134,14 @@ p{
         position: relative;
         height: 300px;
         width: 100%;
-        
-    }
-    img{
         display: block;
+        border-radius: 5px;
         
     }
+    .image{
+        border-radius: 5px;
+        display: block;
+    }
+
 
 }
