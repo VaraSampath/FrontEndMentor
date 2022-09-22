@@ -1,120 +1,129 @@
-@import url("https://fonts.google.com/specimen/Montserrat");
-@import url("https://fonts.google.com/specimen/Fraunces");
+
+
+:root{
+    font-size: 32px;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: antiquewhite;
-    padding: 5rem 4rem;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    margin: 0;
-    padding: 0;
-    display: block;
-    border-top-left-radius: .7rem;
-    border-top-right-radius: .7rem;
+picture,img{
+    width: 100%;
     
 }
-img:nth-child(2){
-    display: none;
+body{
+    background-color: hsl(233, 47%, 7%);
+    padding: 1.5em;
+    position: relative;
+    font-family:Inter;
+}
+.background{
+    background: url('/images/image-header-mobile.jpg');
+    background-size: cover;
+    position: relative;
+    height: 300px;
     width: 100%;
+    
+}
+.image{
+    background-color: hsl(277, 64%, 61%,0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 .container{
-    background-color:white;
-    border-radius: .7rem;
+    background-color: hsl(244, 38%, 16%)
+}
+.info{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: .5rem;
+    text-align: center;
     
 }
-.product-details > * {
-    margin-block : .75rem;
+.bold{
+    font-weight: bold;
+    color: hsl(277, 64%, 61%)
 }
-.product-details{
-    padding: 1.0em;
+.partners{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap:1.0em;
+    
 }
-.product-title{
-    font-size: 0.85em;
-    font-weight: 900;
-    color:hsl(228, 12%, 48%);
-    font-family: Montserrat;
-    text-transform: uppercase;
+.partners div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
-.product-desc >h1{
-    font-family: Fraunces;
-    font-size: 2.0em;
+.partners div span{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+.partners div p{
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 15px;
+}
+h1{
+    font-size: 0.7rem;
+    color: white;
+    
     font-weight: 700;
-    color: hsl(212, 21%, 14%);
-    margin-block: .5em;
+    
 }
 p{
-    font-size: 16px;
-    font-family:Montserrat ;
-    color:hsl(228, 12%, 48%);
-    line-height: 1.5;
-}
-.rate{
-    display: flex;
-    gap:1em;
-    margin-block: .5em;
-    align-items: center;
-}
-.rate >p{
-    color: hsl(158, 36%, 37%);
-    font-size: 2.0em;
-    font-weight: 700;
-}
-.rate >p:nth-child(2){
-    color: hsl(228, 12%, 48%);
-    font-size: 16px;
-    text-decoration: line-through;
-
-}
-button{
-    display: flex;
-    gap: 0.5em;
-    width: 100%;
-    padding: 1em 2em;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    background-color: hsl(158, 36%, 37%);
+    font-size: 13px;
     color: white;
-    font-weight: 700;
-    justify-content: center;
-    align-items: center;
+    font-weight: 500;
+    font-family: Lexend Deca;
+}
+.attribution{
+    position: absolute;
+    top:100%;
+    color: aliceblue;
 }
 
-@media (min-width:760px){
-   
-    img:first-child{
-        display:none;
-    }
-    img:nth-child(2){
-        display:block;
-        width: 100%;
-        height: 100%;
-        
-        border-top-right-radius: 0;
-        border-bottom-left-radius: .5em;
-    }
+@media screen and (min-width: 768px){
     .container{
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin: 10%;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .partners{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: center;
+    }
+    .info{
+        text-align: left;
+        padding: 1.25em;
+        padding-bottom: 0;
+        margin: 0px;
+        grid-column: 1/2;
+        grid-row: span(1);
+    }
+    .background{
+        grid-column: 2/-1;
+        grid-row: 1;
+        background: url('/images/image-header-desktop.jpg');
+        background-size: cover;
+        position: relative;
+        height: 300px;
+        width: 100%;
         
     }
-    body{
-        padding: 10em;
+    img{
+        display: block;
+        
     }
-    .product-details{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
 
-    }
-    
 }
